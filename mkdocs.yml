@@ -1,0 +1,42 @@
+site_name: Pedro Paulo Favato Barcelos
+site_description: Personal website of Pedro Paulo Favato Barcelos
+site_url: https://pedropaulofb.github.io/
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: black
+    accent: blue
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - stylesheets/home.css
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://w3id.org/pedropaulofb/linkedin
+      name: LinkedIn
+    - icon: simple/googlescholar
+      link: https://w3id.org/pedropaulofb/scholar
+      name: Google Scholar
+    - icon: fontawesome/brands/orcid
+      link: https://w3id.org/pedropaulofb/orcid
+      name: ORCID
+    - icon: fontawesome/brands/github
+      link: https://w3id.org/pedropaulofb/github
+      name: GitHub

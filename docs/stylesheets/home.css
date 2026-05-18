@@ -1,0 +1,124 @@
+/* Hide Material's top header for a clean one-page landing page */
+.md-header {
+  display: none;
+}
+
+/* Hide Material's footer, including social icons and "Made with Material for MkDocs" */
+.md-footer {
+  display: none;
+}
+
+/* Remove vertical offset left by the hidden header */
+.md-container {
+  padding-top: 0;
+}
+
+/* Make the main content use the full viewport width */
+.md-main__inner {
+  margin: 0;
+  max-width: none;
+}
+
+.md-content {
+  max-width: none;
+}
+
+.md-content__inner {
+  margin: 0;
+  padding: 0;
+}
+
+.md-content__inner::before {
+  display: none;
+}
+
+/* Landing page hero section */
+.hero {
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin: 0 0 1rem;
+  font-size: clamp(2.8rem, 7vw, 6.2rem);
+  line-height: 0.95;
+  font-weight: 750;
+  letter-spacing: -0.055em;
+}
+
+.subtitle {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.15rem, 2vw, 1.8rem);
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.description {
+  max-width: 720px;
+  margin-bottom: 2.2rem;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  opacity: 0.78;
+}
+
+/* Profile links */
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, max-content));
+  gap: 0.85rem;
+}
+
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-width: 180px;
+  border: 1px solid color-mix(in srgb, currentColor 45%, transparent);
+  border-radius: 999px;
+  padding: 0.72rem 1.05rem;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0.86;
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease,
+    border-color 150ms ease,
+    background-color 150ms ease;
+}
+
+.profile-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  border-color: currentColor;
+  background-color: color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.profile-link .twemoji,
+.profile-link .md-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+/* Mobile layout */
+@media screen and (max-width: 640px) {
+  .hero {
+    min-height: 100vh;
+    padding: 3rem 1rem;
+  }
+
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-link {
+    width: 100%;
+  }
+}
