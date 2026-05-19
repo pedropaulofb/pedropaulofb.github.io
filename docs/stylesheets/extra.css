@@ -1,30 +1,57 @@
-/* Site-level visual direction:
-   dark, restrained, high-contrast, documentation-oriented.
-   This replaces the one-page-only home.css approach. */
+/* ==========================================================================
+   Site-wide visual direction
+   --------------------------------------------------------------------------
+   Purpose:
+   - Define the custom dark visual system for the whole MkDocs Material site.
+   - Keep the site restrained, high-contrast, and documentation-oriented.
+   - Centralize custom colors through CSS variables so later changes are easier.
+
+   Scope:
+   - These variables apply only to the MkDocs Material "slate" color scheme.
+   - The site currently uses the slate scheme in mkdocs.yml.
+   ========================================================================== */
 
 [data-md-color-scheme="slate"] {
+  /* Material hue basis for the dark theme. */
   --md-hue: 215;
 
+  /* Core background and foreground colors. */
   --md-default-bg-color: #0b0f14;
   --md-default-fg-color: #e8edf3;
   --md-default-fg-color--light: #b9c3cf;
   --md-default-fg-color--lighter: #8b98a8;
 
+  /* Header/navigation foreground and background colors. */
   --md-primary-fg-color: #06080c;
   --md-primary-bg-color: #e8edf3;
 
+  /* Accent and link color. */
   --md-accent-fg-color: #8ab4f8;
   --md-typeset-a-color: #8ab4f8;
 
+  /* Code block colors. */
   --md-code-bg-color: #111821;
   --md-code-fg-color: #e8edf3;
 
+  /* Site-specific design tokens. */
   --ppfb-border-color: hsla(213, 28%, 78%, 0.18);
   --ppfb-border-color-strong: hsla(213, 28%, 78%, 0.34);
   --ppfb-surface-color: hsla(213, 28%, 24%, 0.24);
   --ppfb-surface-color-hover: hsla(213, 28%, 30%, 0.34);
   --ppfb-muted-color: #a9b5c4;
+
+  /* Keyboard focus ring color for accessibility. */
+  --ppfb-focus-ring-color: #b8d3ff;
 }
+
+/* ==========================================================================
+   Header and top navigation
+   --------------------------------------------------------------------------
+   Purpose:
+   - Keep the MkDocs Material header visible and restrained.
+   - Remove visual weight from the default header shadow.
+   - Hide the default Material logo button because the site title is sufficient.
+   ========================================================================== */
 
 /* Keep Material navigation visible for the multi-page site. */
 .md-header {
@@ -37,19 +64,52 @@
   display: none;
 }
 
+/* Style the tab bar so it blends with the custom dark background. */
 .md-tabs {
   background-color: var(--md-default-bg-color);
   border-bottom: 1px solid var(--ppfb-border-color);
 }
 
+/* Keep inactive tab labels quieter. */
 .md-tabs__link {
   opacity: 0.78;
 }
 
+/* Restore full opacity for the active or hovered tab. */
 .md-tabs__link--active,
 .md-tabs__link:hover {
   opacity: 1;
 }
+
+/* ==========================================================================
+   Keyboard accessibility
+   --------------------------------------------------------------------------
+   Purpose:
+   - Add visible focus outlines for keyboard users.
+   - Cover header buttons, navigation links, tab links, and content links.
+   - Use :focus-visible so outlines appear for keyboard navigation but not
+     unnecessarily for mouse clicks in modern browsers.
+   ========================================================================== */
+
+.md-header__button:focus-visible,
+.md-nav__link:focus-visible,
+.md-tabs__link:focus-visible,
+.md-typeset a:focus-visible {
+  outline: 2px solid var(--ppfb-focus-ring-color, #b8d3ff);
+  outline-offset: 3px;
+  border-radius: 0.2rem;
+}
+
+/* ==========================================================================
+   Layout width and sidebars
+   --------------------------------------------------------------------------
+   Purpose:
+   - Slightly widen the default Material layout.
+   - Hide the duplicated left navigation on desktop because top tabs already
+     provide primary navigation.
+   - Preserve the mobile navigation drawer on smaller screens.
+   - Keep the main reading measure controlled for readability.
+   ========================================================================== */
 
 /* Wider than the Material default, while keeping a composed documentation layout. */
 .md-grid {
@@ -86,7 +146,14 @@
   }
 }
 
-/* Footer remains visible, but visually quiet. */
+/* ==========================================================================
+   Footer
+   --------------------------------------------------------------------------
+   Purpose:
+   - Keep the footer visible.
+   - Make it visually quiet so it does not compete with the page content.
+   ========================================================================== */
+
 .md-footer {
   background-color: var(--md-default-bg-color);
   border-top: 1px solid var(--ppfb-border-color);
@@ -96,17 +163,27 @@
   background-color: var(--md-default-bg-color);
 }
 
-/* General typesetting. */
+/* ==========================================================================
+   General typography
+   --------------------------------------------------------------------------
+   Purpose:
+   - Tune the default Material typography for a compact professional site.
+   - Preserve readable line height.
+   - Use strong headings without making the site look promotional.
+   ========================================================================== */
+
 .md-typeset {
   font-size: 0.82rem;
 }
 
+/* Main page title. */
 .md-typeset h1 {
   margin-bottom: 1rem;
   font-weight: 720;
   letter-spacing: -0.035em;
 }
 
+/* Section headings. The top border gives structure on long technical pages. */
 .md-typeset h2 {
   margin-top: 2.4rem;
   padding-top: 0.75rem;
@@ -115,27 +192,47 @@
   letter-spacing: -0.02em;
 }
 
+/* Subsection headings. */
 .md-typeset h3 {
   margin-top: 1.8rem;
   font-weight: 650;
 }
 
+/* Comfortable reading rhythm for paragraphs and list items. */
 .md-typeset p,
 .md-typeset li {
   line-height: 1.68;
 }
 
+/* Make bold labels readable against the dark background. */
 .md-typeset strong {
   color: var(--md-default-fg-color);
 }
 
+/* Make underlines sit slightly away from the text. */
 .md-typeset a {
   text-underline-offset: 0.18em;
 }
 
+/* Standard hover affordance for links. */
 .md-typeset a:hover {
   text-decoration: underline;
 }
+
+/* Prevent long external URLs or identifiers from forcing horizontal overflow.
+   break-word avoids aggressive mid-word breaks unless needed for layout safety. */
+.md-typeset a,
+.md-typeset code {
+  overflow-wrap: break-word;
+}
+
+/* ==========================================================================
+   Tables
+   --------------------------------------------------------------------------
+   Purpose:
+   - Support the technical stack tables and structured summaries.
+   - Keep tables restrained and aligned with the dark documentation aesthetic.
+   ========================================================================== */
 
 /* Tables, used sparingly for structured technical summaries. */
 .md-typeset table:not([class]) {
@@ -144,18 +241,30 @@
   overflow: hidden;
 }
 
+/* Header row background. */
 .md-typeset table:not([class]) th {
   background-color: var(--ppfb-surface-color);
   color: var(--md-default-fg-color);
 }
 
+/* Shared table cell styling. */
 .md-typeset table:not([class]) td,
 .md-typeset table:not([class]) th {
   border-color: var(--ppfb-border-color);
   vertical-align: top;
 }
 
-/* Homepage hero. */
+/* ==========================================================================
+   Homepage hero section
+   --------------------------------------------------------------------------
+   Purpose:
+   - Style the custom homepage introduction in docs/index.md.
+   - Keep the homepage visually distinct while still using the same site tokens.
+   - The corresponding HTML structure is:
+     <section class="hero" markdown="1"> ... </section>
+   ========================================================================== */
+
+/* Main hero container. */
 .md-typeset .hero {
   min-height: calc(100vh - 9rem);
   box-sizing: border-box;
@@ -166,6 +275,7 @@
   padding: 4.5rem 0 5rem;
 }
 
+/* Large homepage name heading. */
 .md-typeset .hero h1 {
   max-width: 54rem;
   margin: 0 0 1rem;
@@ -175,6 +285,7 @@
   letter-spacing: -0.06em;
 }
 
+/* Homepage professional subtitle. */
 .md-typeset .hero .subtitle {
   margin-bottom: 1.35rem;
   color: var(--md-default-fg-color);
@@ -183,6 +294,7 @@
   line-height: 1.35;
 }
 
+/* Homepage summary paragraph. */
 .md-typeset .hero .description {
   max-width: 45rem;
   margin-bottom: 2rem;
@@ -191,7 +303,16 @@
   line-height: 1.75;
 }
 
-/* Primary homepage profile/contact links. */
+/* ==========================================================================
+   Homepage profile/contact links
+   --------------------------------------------------------------------------
+   Purpose:
+   - Style the LinkedIn, Email, GitHub, Google Scholar, and ORCID links.
+   - Keep them button-like on the homepage only.
+   - Preserve a restrained pill design rather than using heavy cards.
+   ========================================================================== */
+
+/* Link grid wrapper. */
 .md-typeset .link-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(9.5rem, max-content));
@@ -199,6 +320,7 @@
   margin: 0;
 }
 
+/* Individual profile/contact link pill. */
 .md-typeset .profile-link {
   display: inline-flex;
   align-items: center;
@@ -218,26 +340,53 @@
     transform 150ms ease;
 }
 
-.md-typeset .profile-link:hover {
+/* Shared hover and keyboard-focus visual state. */
+.md-typeset .profile-link:hover,
+.md-typeset .profile-link:focus-visible {
   border-color: var(--md-typeset-a-color);
   background-color: var(--ppfb-surface-color-hover);
   text-decoration: none;
+}
+
+/* Mouse-only micro-interaction. */
+.md-typeset .profile-link:hover {
   transform: translateY(-1px);
 }
 
+/* Icon size inside profile links. */
 .md-typeset .profile-link .twemoji,
 .md-typeset .profile-link .md-icon {
   width: 1.05rem;
   height: 1.05rem;
 }
 
-/* Compact metadata blocks in project pages. */
-.md-typeset p:has(strong:first-child) {
+/* ==========================================================================
+   Structured key-value paragraphs
+   --------------------------------------------------------------------------
+   Purpose:
+   - Compact paragraphs that start with a bold key, such as:
+     **Type:** ...
+     **Status:** ...
+   - This targets paragraph-based metadata blocks only.
+   - It does not affect list-based metadata such as:
+     - **Type:** ...
+   - The direct-child selector avoids affecting nested bold text.
+   ========================================================================== */
+
+/* Compact key-value paragraphs used in structured content blocks. */
+.md-typeset p:has(> strong:first-child) {
   margin-top: 0.35rem;
   margin-bottom: 0.35rem;
 }
 
-/* Mobile adjustments. */
+/* ==========================================================================
+   Mobile adjustments
+   --------------------------------------------------------------------------
+   Purpose:
+   - Reduce hero height on smaller screens.
+   - Make profile links stack vertically and fill the available width.
+   ========================================================================== */
+
 @media screen and (max-width: 640px) {
   .md-typeset .hero {
     min-height: auto;
@@ -254,5 +403,24 @@
 
   .md-typeset .profile-link {
     width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Reduced motion
+   --------------------------------------------------------------------------
+   Purpose:
+   - Respect user/system reduced-motion preferences.
+   - Remove profile-link transition and hover movement for users who request
+     less animation.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .profile-link {
+    transition: none;
+  }
+
+  .md-typeset .profile-link:hover {
+    transform: none;
   }
 }
