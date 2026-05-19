@@ -32,6 +32,11 @@
   border-bottom: 1px solid var(--ppfb-border-color);
 }
 
+/* Hide the default Material logo before the site title. */
+.md-header__button.md-logo {
+  display: none;
+}
+
 .md-tabs {
   background-color: var(--md-default-bg-color);
   border-bottom: 1px solid var(--ppfb-border-color);
@@ -46,9 +51,39 @@
   opacity: 1;
 }
 
-/* Slightly wider than the Material default, without becoming a full-width layout. */
+/* Wider than the Material default, while keeping a composed documentation layout. */
 .md-grid {
-  max-width: 74rem;
+  max-width: 78rem;
+}
+
+/* The top navigation already provides the primary page-level navigation.
+   On desktop, hide the duplicated left navigation column and let the
+   content occupy the recovered space. On smaller screens, keep Material's
+   primary sidebar available for the mobile navigation drawer. */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    display: none;
+  }
+
+  .md-main__inner {
+    margin-top: 0;
+  }
+
+  .md-content {
+    margin-left: 0;
+  }
+}
+
+/* Keep the article measure readable after removing the left sidebar. */
+.md-content__inner {
+  max-width: 58rem;
+}
+
+/* Preserve comfortable separation between content and the right-side TOC. */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--secondary {
+    margin-left: 1.6rem;
+  }
 }
 
 /* Footer remains visible, but visually quiet. */
@@ -156,19 +191,19 @@
   line-height: 1.75;
 }
 
-/* Primary homepage page links. */
+/* Primary homepage profile/contact links. */
 .md-typeset .link-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(9.5rem, max-content));
   gap: 0.7rem;
-  margin: 0 0 1.2rem;
+  margin: 0;
 }
 
 .md-typeset .profile-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.48rem;
+  gap: 0.5rem;
   min-width: 9.5rem;
   border: 1px solid var(--ppfb-border-color-strong);
   border-radius: 999px;
@@ -194,24 +229,6 @@
 .md-typeset .profile-link .md-icon {
   width: 1.05rem;
   height: 1.05rem;
-}
-
-/* Secondary homepage profile/contact links. */
-.md-typeset .profile-row {
-  max-width: 46rem;
-  color: var(--ppfb-muted-color);
-  font-size: 0.82rem;
-  line-height: 1.8;
-}
-
-.md-typeset .profile-row a {
-  color: var(--ppfb-muted-color);
-  text-decoration: none;
-}
-
-.md-typeset .profile-row a:hover {
-  color: var(--md-typeset-a-color);
-  text-decoration: underline;
 }
 
 /* Compact metadata blocks in project pages. */

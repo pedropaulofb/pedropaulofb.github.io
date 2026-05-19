@@ -17,19 +17,15 @@ I work on formal, machine-processable representations of domain meaning: concept
 
 <div class="link-grid" markdown="1">
 
-[Expertise](expertise.md){ .profile-link }
+[:fontawesome-brands-linkedin: LinkedIn](https://w3id.org/pedropaulofb/linkedin){ .profile-link }
 
-[Projects](projects.md){ .profile-link }
+[:material-email: Email](https://w3id.org/pedropaulofb/email){ .profile-link }
 
-[Publications](publications.md){ .profile-link }
+[:fontawesome-brands-github: GitHub](https://w3id.org/pedropaulofb/github){ .profile-link }
 
-[Contact](contact.md){ .profile-link }
+[:simple-googlescholar: Google Scholar](https://w3id.org/pedropaulofb/scholar){ .profile-link }
 
-</div>
-
-<div class="profile-row" markdown="1">
-
-[LinkedIn](https://w3id.org/pedropaulofb/linkedin) · [Email](https://w3id.org/pedropaulofb/email) · [GitHub](https://w3id.org/pedropaulofb/github) · [Google Scholar](https://w3id.org/pedropaulofb/scholar) · [ORCID](https://w3id.org/pedropaulofb/orcid)
+[:fontawesome-brands-orcid: ORCID](https://w3id.org/pedropaulofb/orcid){ .profile-link }
 
 </div>
 
