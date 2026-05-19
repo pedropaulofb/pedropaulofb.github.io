@@ -1,9 +1,11 @@
 site_name: Pedro Paulo Favato Barcelos
-site_description: Personal website of Pedro Paulo Favato Barcelos
+site_description: Ontology engineering, knowledge engineering, conceptual modeling, and Semantic Web work by Pedro Paulo Favato Barcelos
+site_author: Pedro Paulo Favato Barcelos
 site_url: https://pedropaulofb.github.io/
 
 theme:
   name: material
+  language: en
   palette:
     scheme: slate
     primary: black
@@ -14,16 +16,41 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Expertise: expertise.md
+  - Projects: projects.md
+  - Publications: publications.md
+  - Contact: contact.md
+
+plugins:
+  - search
 
 markdown_extensions:
+  - admonition
   - attr_list
   - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:
-  - stylesheets/home.css
+  - stylesheets/extra.css
 
 extra:
   generator: false
@@ -31,12 +58,17 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://w3id.org/pedropaulofb/linkedin
       name: LinkedIn
+    - icon: material/email
+      link: https://w3id.org/pedropaulofb/email
+      name: Email
+    - icon: fontawesome/brands/github
+      link: https://w3id.org/pedropaulofb/github
+      name: GitHub
     - icon: simple/googlescholar
       link: https://w3id.org/pedropaulofb/scholar
       name: Google Scholar
     - icon: fontawesome/brands/orcid
       link: https://w3id.org/pedropaulofb/orcid
       name: ORCID
-    - icon: fontawesome/brands/github
-      link: https://w3id.org/pedropaulofb/github
-      name: GitHub
+
+copyright: Copyright &copy; 2026 Pedro Paulo Favato Barcelos

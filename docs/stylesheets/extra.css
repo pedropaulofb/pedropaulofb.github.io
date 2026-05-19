@@ -1,0 +1,241 @@
+/* Site-level visual direction:
+   dark, restrained, high-contrast, documentation-oriented.
+   This replaces the one-page-only home.css approach. */
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 215;
+
+  --md-default-bg-color: #0b0f14;
+  --md-default-fg-color: #e8edf3;
+  --md-default-fg-color--light: #b9c3cf;
+  --md-default-fg-color--lighter: #8b98a8;
+
+  --md-primary-fg-color: #06080c;
+  --md-primary-bg-color: #e8edf3;
+
+  --md-accent-fg-color: #8ab4f8;
+  --md-typeset-a-color: #8ab4f8;
+
+  --md-code-bg-color: #111821;
+  --md-code-fg-color: #e8edf3;
+
+  --ppfb-border-color: hsla(213, 28%, 78%, 0.18);
+  --ppfb-border-color-strong: hsla(213, 28%, 78%, 0.34);
+  --ppfb-surface-color: hsla(213, 28%, 24%, 0.24);
+  --ppfb-surface-color-hover: hsla(213, 28%, 30%, 0.34);
+  --ppfb-muted-color: #a9b5c4;
+}
+
+/* Keep Material navigation visible for the multi-page site. */
+.md-header {
+  box-shadow: none;
+  border-bottom: 1px solid var(--ppfb-border-color);
+}
+
+.md-tabs {
+  background-color: var(--md-default-bg-color);
+  border-bottom: 1px solid var(--ppfb-border-color);
+}
+
+.md-tabs__link {
+  opacity: 0.78;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  opacity: 1;
+}
+
+/* Slightly wider than the Material default, without becoming a full-width layout. */
+.md-grid {
+  max-width: 74rem;
+}
+
+/* Footer remains visible, but visually quiet. */
+.md-footer {
+  background-color: var(--md-default-bg-color);
+  border-top: 1px solid var(--ppfb-border-color);
+}
+
+.md-footer-meta {
+  background-color: var(--md-default-bg-color);
+}
+
+/* General typesetting. */
+.md-typeset {
+  font-size: 0.82rem;
+}
+
+.md-typeset h1 {
+  margin-bottom: 1rem;
+  font-weight: 720;
+  letter-spacing: -0.035em;
+}
+
+.md-typeset h2 {
+  margin-top: 2.4rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--ppfb-border-color);
+  font-weight: 680;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h3 {
+  margin-top: 1.8rem;
+  font-weight: 650;
+}
+
+.md-typeset p,
+.md-typeset li {
+  line-height: 1.68;
+}
+
+.md-typeset strong {
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset a {
+  text-underline-offset: 0.18em;
+}
+
+.md-typeset a:hover {
+  text-decoration: underline;
+}
+
+/* Tables, used sparingly for structured technical summaries. */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--ppfb-border-color);
+  border-radius: 0.55rem;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--ppfb-surface-color);
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+  border-color: var(--ppfb-border-color);
+  vertical-align: top;
+}
+
+/* Homepage hero. */
+.md-typeset .hero {
+  min-height: calc(100vh - 9rem);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 58rem;
+  padding: 4.5rem 0 5rem;
+}
+
+.md-typeset .hero h1 {
+  max-width: 54rem;
+  margin: 0 0 1rem;
+  font-size: clamp(2.6rem, 7vw, 5.6rem);
+  line-height: 0.95;
+  font-weight: 760;
+  letter-spacing: -0.06em;
+}
+
+.md-typeset .hero .subtitle {
+  margin-bottom: 1.35rem;
+  color: var(--md-default-fg-color);
+  font-size: clamp(1.05rem, 2vw, 1.55rem);
+  font-weight: 520;
+  line-height: 1.35;
+}
+
+.md-typeset .hero .description {
+  max-width: 45rem;
+  margin-bottom: 2rem;
+  color: var(--ppfb-muted-color);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+/* Primary homepage page links. */
+.md-typeset .link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, max-content));
+  gap: 0.7rem;
+  margin: 0 0 1.2rem;
+}
+
+.md-typeset .profile-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.48rem;
+  min-width: 9.5rem;
+  border: 1px solid var(--ppfb-border-color-strong);
+  border-radius: 999px;
+  padding: 0.62rem 0.95rem;
+  background-color: var(--ppfb-surface-color);
+  color: var(--md-default-fg-color);
+  font-weight: 620;
+  text-decoration: none;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+.md-typeset .profile-link:hover {
+  border-color: var(--md-typeset-a-color);
+  background-color: var(--ppfb-surface-color-hover);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.md-typeset .profile-link .twemoji,
+.md-typeset .profile-link .md-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+/* Secondary homepage profile/contact links. */
+.md-typeset .profile-row {
+  max-width: 46rem;
+  color: var(--ppfb-muted-color);
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+.md-typeset .profile-row a {
+  color: var(--ppfb-muted-color);
+  text-decoration: none;
+}
+
+.md-typeset .profile-row a:hover {
+  color: var(--md-typeset-a-color);
+  text-decoration: underline;
+}
+
+/* Compact metadata blocks in project pages. */
+.md-typeset p:has(strong:first-child) {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Mobile adjustments. */
+@media screen and (max-width: 640px) {
+  .md-typeset .hero {
+    min-height: auto;
+    padding: 3rem 0 3.5rem;
+  }
+
+  .md-typeset .hero h1 {
+    font-size: clamp(2.3rem, 13vw, 3.5rem);
+  }
+
+  .md-typeset .link-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .md-typeset .profile-link {
+    width: 100%;
+  }
+}
