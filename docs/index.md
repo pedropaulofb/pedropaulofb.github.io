@@ -12,7 +12,7 @@ Ontologist · Ontology Engineer · Knowledge Engineer
 </div>
 
 <div class="description">
-I work on formal, machine-processable representations of domain meaning: conceptual models, ontologies, semantic artifacts, mappings, and knowledge graphs. My work connects ontology engineering with practical Semantic Web implementation.
+I work on ontology and knowledge engineering across domains: conceptual models, ontologies, vocabularies, mappings, metadata resources, and knowledge graphs. My work connects ontological analysis with practical Semantic Web implementation.
 </div>
 
 <div class="link-grid" markdown="1">
@@ -30,3 +30,5 @@ I work on formal, machine-processable representations of domain meaning: concept
 </div>
 
 </section>
+
+Current professional context: Senior Metadata and Semantics Specialist at Health-RI.

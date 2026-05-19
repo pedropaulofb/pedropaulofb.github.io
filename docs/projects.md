@@ -1,15 +1,22 @@
 # Projects
 
-This page lists a small selection of work relevant to ontology engineering, semantic interoperability, knowledge representation, and reusable semantic artifacts. It is not a full project history.
+This page lists selected work relevant to ontology engineering, semantic interoperability, knowledge representation, and reusable semantic artifacts. It is not a full project history.
+
+The selection emphasizes:
+
+- Ontology-driven conceptual modeling
+- Foundational ontology and OWL-based representation
+- Applied ontology and modeling-language work
+- Semantic traceability, mappings, vocabularies, and FAIR-aligned semantic resources
 
 ## OntoUML/UFO Catalog
 
-**Type:** Research infrastructure and model catalog  
-**Status:** Public catalog and associated publications  
-**Role:** Research contributor and catalog curator  
-**Technical focus:** OntoUML, UFO, FAIR model publication, model metadata, empirical conceptual-model research
+- **Type:** Research infrastructure and model catalog
+- **Status:** Public catalog and associated publications
+- **Role:** Research contributor and catalog curator
+- **Technical focus:** OntoUML, UFO, FAIR model publication, model metadata, empirical conceptual-model research
 
-The OntoUML/UFO Catalog is a public catalog of OntoUML and UFO models used to support ontology-driven conceptual modeling research. My work around the catalog connects conceptual modeling, FAIR-aligned publication practices, model metadata, and empirical analysis of conceptual-model structures.
+The OntoUML/UFO Catalog is a public catalog of OntoUML and UFO models for ontology-driven conceptual modeling research. My work around the catalog connects conceptual modeling, FAIR-aligned publication practices, model metadata, and empirical analysis of conceptual-model structures.
 
 **Links**
 
@@ -19,12 +26,12 @@ The OntoUML/UFO Catalog is a public catalog of OntoUML and UFO models used to su
 
 ## Foundational-rule inference over OWL ontologies
 
-**Type:** Research line  
-**Status:** Published research  
-**Role:** Author and research contributor  
-**Technical focus:** OWL, foundational ontology, ontological categories, rule-based inference, knowledge representation
+- **Type:** Research line
+- **Status:** Published research
+- **Role:** Author and research contributor
+- **Technical focus:** OWL, foundational ontology, ontological categories, rule-based inference, knowledge representation
 
-This work investigates how foundational ontology principles can support the inference of ontological categories for OWL classes. The aim is to connect machine-processable ontologies with stronger ontological distinctions, reducing the gap between Semantic Web implementation and foundational analysis.
+This work investigates how foundational ontology principles can support the inference of ontological categories for OWL classes. It connects machine-processable ontologies with stronger ontological distinctions, reducing the gap between Semantic Web implementation and foundational analysis.
 
 **Links**
 
@@ -33,10 +40,10 @@ This work investigates how foundational ontology principles can support the infe
 
 ## Resilience modeling with ontological foundations
 
-**Type:** Applied ontology and modeling-language work  
-**Status:** Published research and public ontology artifacts  
-**Role:** Research contributor  
-**Technical focus:** Resilience, reference ontology, OntoUML, ontology-driven domain-specific modeling language
+- **Type:** Applied ontology and modeling-language work
+- **Status:** Published research and public ontology artifacts
+- **Role:** Research contributor
+- **Technical focus:** Resilience, reference ontology, OntoUML, ontology-driven domain-specific modeling language
 
 This work uses ontological analysis to clarify resilience-related concepts and support the specification and evaluation of resilience scenarios in complex systems. It connects foundational analysis with applied modeling and domain-specific modeling-language design.
 
@@ -48,14 +55,12 @@ This work uses ontological analysis to clarify resilience-related concepts and s
 
 ## Health-RI semantic interoperability work
 
-**Type:** Professional semantic-interoperability work  
-**Status:** Public materials available; the public initiative documentation states that the initiative is formally paused as of 2026-05-01  
-**Role:** Current professional context at Health-RI  
-**Technical focus:** Semantic traceability, ontology-based modeling, mappings, vocabularies, semantic governance, FAIR-aligned publication
+- **Type:** Professional semantic-interoperability work
+- **Status:** Public materials available; see the linked initiative documentation for current status
+- **Role:** Senior Metadata and Semantics Specialist
+- **Technical focus:** Semantic traceability, ontology-based modeling, mappings, vocabularies, semantic governance, FAIR-aligned publication
 
 At Health-RI, my work has included semantic interoperability, ontology-based modeling, mappings, and FAIR-aligned semantic resources for health-data infrastructure. This work is listed here as one professional application context for broader ontology-engineering and knowledge-engineering methods.
-
-The public initiative materials should be read according to their current status notice.
 
 **Links**
 
