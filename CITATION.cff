@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you cite this website or reuse its machine-readable metadata, please cite it using the metadata below."
+
+title: "Pedro Paulo Favato Barcelos: professional website and machine-readable profile metadata"
+type: dataset
+
+authors:
+  - family-names: "Favato Barcelos"
+    given-names: "Pedro Paulo"
+    orcid: "https://orcid.org/0000-0003-2736-7817"
+    affiliation: "Health-RI"
+    website: "https://pedropaulofb.github.io/"
+
+abstract: "A professional and academic website presenting ontology engineering, semantic interoperability, Semantic Web, FAIR metadata, selected publications, selected projects, and machine-readable profile metadata for Pedro Paulo Favato Barcelos."
+
+keywords:
+  - "ontology engineering"
+  - "semantic interoperability"
+  - "Semantic Web"
+  - "RDF"
+  - "OWL"
+  - "SHACL"
+  - "OntoUML"
+  - "gUFO"
+  - "FAIR metadata"
+  - "knowledge graphs"
+  - "machine-readable metadata"
+  - "professional profile"
+
+license-url: "https://pedropaulofb.github.io/reuse/"
+url: "https://pedropaulofb.github.io/"
+repository-code: "https://github.com/pedropaulofb/pedropaulofb.github.io"
+
+identifiers:
+  - type: url
+    value: "https://pedropaulofb.github.io/"
+    description: "Public website."
+  - type: url
+    value: "https://pedropaulofb.github.io/profile.jsonld"
+    description: "Machine-readable JSON-LD profile metadata."
+  - type: url
+    value: "https://github.com/pedropaulofb/pedropaulofb.github.io"
+    description: "Source repository."
+
+preferred-citation:
+  type: website
+  title: "Pedro Paulo Favato Barcelos: professional website and machine-readable profile metadata"
+  authors:
+    - family-names: "Favato Barcelos"
+      given-names: "Pedro Paulo"
+      orcid: "https://orcid.org/0000-0003-2736-7817"
+      affiliation: "Health-RI"
+      website: "https://pedropaulofb.github.io/"
+  url: "https://pedropaulofb.github.io/"
+  year: 2026
