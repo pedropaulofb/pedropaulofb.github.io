@@ -14,3 +14,5 @@ Use LinkedIn or email for professional contact.
 - [GitHub](https://w3id.org/pedropaulofb/github) — code, semantic artifacts, repositories, and documentation.
 - [Google Scholar](https://w3id.org/pedropaulofb/scholar) — publication record.
 - [ORCID](https://w3id.org/pedropaulofb/orcid) — persistent researcher identifier.
+
+Machine-readable profile: [`profile.jsonld`](profile.jsonld)

@@ -25,6 +25,7 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+  custom_dir: overrides
 
 nav:
   - Home: index.md

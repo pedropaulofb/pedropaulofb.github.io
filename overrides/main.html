@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block extrahead %} {{ super() }}
+
+<link
+  rel="alternate"
+  type="application/ld+json"
+  href="{{ 'profile.jsonld' | url }}"
+  title="Machine-readable JSON-LD profile"
+/>
+{% endblock %}
