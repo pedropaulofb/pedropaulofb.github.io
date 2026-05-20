@@ -7,10 +7,11 @@ description: Selected publications by Pedro Paulo Favato Barcelos on ontology en
 
 This page lists selected publications and accepted papers most relevant to ontology engineering, conceptual modeling, Semantic Web implementation, semantic interoperability, knowledge representation, and reusable semantic artifacts.
 
-It is not a complete publication list. For a broader and more current record, see:
+It is not a complete publication list. For broader and more frequently updated publication records, see:
 
 - [Google Scholar](https://w3id.org/pedropaulofb/scholar)
 - [ORCID](https://w3id.org/pedropaulofb/orcid)
+- [DBLP](https://dblp.org/pid/96/8280)
 
 ## Selection focus
 
