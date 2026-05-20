@@ -6,4 +6,50 @@
   href="{{ 'profile.jsonld' | url }}"
   title="Machine-readable JSON-LD profile"
 />
-{% endblock %}
+
+{% if page and page.file and page.file.src_path == "index.md" %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@id": "https://pedropaulofb.github.io/#website",
+        "@type": "WebSite",
+        "name": "Pedro Paulo Favato Barcelos",
+        "url": "https://pedropaulofb.github.io/",
+        "inLanguage": "en",
+        "author": {
+          "@id": "https://pedropaulofb.github.io/profile.jsonld#person"
+        },
+        "publisher": {
+          "@id": "https://pedropaulofb.github.io/profile.jsonld#person"
+        },
+        "about": {
+          "@id": "https://pedropaulofb.github.io/profile.jsonld#person"
+        }
+      },
+      {
+        "@id": "https://pedropaulofb.github.io/#profile-page",
+        "@type": "ProfilePage",
+        "url": "https://pedropaulofb.github.io/",
+        "name": "Pedro Paulo Favato Barcelos",
+        "description": "Professional and academic profile of Pedro Paulo Favato Barcelos, focused on ontology engineering, knowledge engineering, conceptual modeling, semantic interoperability, and Semantic Web technologies.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@id": "https://pedropaulofb.github.io/#website"
+        },
+        "mainEntity": {
+          "@id": "https://pedropaulofb.github.io/profile.jsonld#person"
+        },
+        "about": {
+          "@id": "https://pedropaulofb.github.io/profile.jsonld#person"
+        },
+        "author": {
+          "@id": "https://pedropaulofb.github.io/profile.jsonld#person"
+        },
+        "sameAs": ["https://pedropaulofb.github.io/profile.jsonld"]
+      }
+    ]
+  }
+</script>
+{% endif %} {% endblock %}
