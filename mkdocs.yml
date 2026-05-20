@@ -35,6 +35,9 @@ nav:
   - Publications: publications.md
   - Contact: contact.md
 
+not_in_nav: |
+  /reuse.md
+
 plugins:
   - search
 
@@ -73,4 +76,6 @@ extra:
       link: https://w3id.org/pedropaulofb/orcid
       name: ORCID
 
-copyright: Copyright &copy; 2026 Pedro Paulo Favato Barcelos
+copyright: >
+  Copyright © 2026 Pedro Paulo Favato Barcelos.
+  <a href="/reuse/">Reuse and attribution</a>.
