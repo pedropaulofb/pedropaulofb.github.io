@@ -1,3 +1,8 @@
+---
+title: Contact
+description: Contact channels and external profile links for Pedro Paulo Favato Barcelos, including scholarly, professional, and developer profiles.
+---
+
 # Contact
 
 Use LinkedIn or email for professional contact.

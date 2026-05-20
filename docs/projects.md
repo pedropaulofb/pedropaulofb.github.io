@@ -1,3 +1,8 @@
+---
+title: Projects
+description: Selected projects involving ontology engineering, semantic interoperability, model catalogs, semantic mappings, and reusable semantic resources.
+---
+
 # Projects
 
 This page lists selected work relevant to ontology engineering, semantic interoperability, knowledge representation, and reusable semantic artifacts. It is not a full project history.

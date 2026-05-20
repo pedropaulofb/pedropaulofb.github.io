@@ -1,3 +1,8 @@
+---
+title: About
+description: Professional and academic background of Pedro Paulo Favato Barcelos, including ontology engineering, semantic interoperability, education, and research context.
+---
+
 # About
 
 I am an ontologist, ontology engineer, and knowledge engineer based in the Netherlands.

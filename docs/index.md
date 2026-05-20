@@ -1,4 +1,6 @@
 ---
+title: Pedro Paulo Favato Barcelos
+description: Ontologist, ontology engineer, and knowledge engineer focused on conceptual models, ontologies, vocabularies, mappings, metadata resources, and knowledge graphs.
 hide:
   - toc
 ---

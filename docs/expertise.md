@@ -1,3 +1,8 @@
+---
+title: Expertise
+description: Expertise in ontology engineering, conceptual modeling, Semantic Web technologies, semantic mappings, validation, and FAIR metadata.
+---
+
 # Expertise
 
 I work on semantic systems where the main difficulty is not only data exchange, but agreement about meaning: terms, categories, relations, constraints, mappings, and the assumptions behind them.

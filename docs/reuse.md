@@ -1,3 +1,8 @@
+---
+title: Reuse and attribution
+description: Reuse and attribution expectations for website content, source code, machine-readable metadata, publication metadata, and external identifiers.
+---
+
 # Reuse and attribution
 
 This page clarifies reuse expectations for this website and its machine-readable metadata.

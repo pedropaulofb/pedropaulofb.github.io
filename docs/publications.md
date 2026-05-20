@@ -1,3 +1,8 @@
+---
+title: Publications
+description: Selected publications by Pedro Paulo Favato Barcelos on ontology engineering, conceptual modeling, Semantic Web, semantic interoperability, and FAIR semantic resources.
+---
+
 # Publications
 
 This page lists selected publications and accepted papers most relevant to ontology engineering, conceptual modeling, Semantic Web implementation, semantic interoperability, knowledge representation, and reusable semantic artifacts.
