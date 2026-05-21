@@ -26,6 +26,8 @@
       "name": "Pedro Paulo Favato Barcelos",
       "description": "Professional and academic profile of Pedro Paulo Favato Barcelos, focused on ontology engineering, knowledge engineering, conceptual modeling, semantic interoperability, and Semantic Web technologies.",
       "inLanguage": "en",
+      "dateCreated": "2026-05-18",
+      "dateModified": "2026-05-21",
       "isPartOf": { "@id": "https://pedropaulofb.github.io/#website" },
       "mainEntity": { "@id": "https://pedropaulofb.github.io/profile.jsonld#person" },
       "about": { "@id": "https://pedropaulofb.github.io/profile.jsonld#person" },
@@ -37,7 +39,13 @@
       "name": "Pedro Paulo Favato Barcelos",
       "givenName": "Pedro Paulo",
       "familyName": "Favato Barcelos",
-      "alternateName": [ "Pedro Paulo F. Barcelos", "Barcelos, P. P. F.", "Barcelos, P.P.F.", "Pedro Paulo Barcelos", "Pedro Barcelos" ],
+      "alternateName": [
+        "Pedro Paulo F. Barcelos",
+        "Barcelos, P. P. F.",
+        "Barcelos, P.P.F.",
+        "Pedro Paulo Barcelos",
+        "Pedro Barcelos"
+      ],
       "jobTitle": "Senior Metadata and Semantics Specialist",
       "description": "Ontologist, ontology engineer, and knowledge engineer working on conceptual models, ontologies, vocabularies, mappings, metadata resources, and knowledge graphs.",
       "url": "https://pedropaulofb.github.io/",
