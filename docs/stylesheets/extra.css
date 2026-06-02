@@ -66,8 +66,8 @@
 
 /* Align the header site title with the first navigation tab after hiding the logo. */
 @media screen and (min-width: 76.25em) {
-  .md-header__title {
-    margin-left: 0;
+  .md-header__inner .md-header__title {
+    margin-left: 12px;
   }
 }
 

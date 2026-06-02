@@ -12,7 +12,7 @@ Use LinkedIn or email for professional contact.
 ## Primary contact
 
 - [LinkedIn](https://w3id.org/pedropaulofb/linkedin) — professional messages, role discussions, and technical collaboration.
-- [Email](https://w3id.org/pedropaulofb/email) — direct contact for professional or publication-related matters.
+- [Email](mailto:pedropaulofb@gmail.com) — direct contact for professional or publication-related matters.
 
 ## Public profiles
 
