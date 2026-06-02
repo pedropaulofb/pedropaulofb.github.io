@@ -21,8 +21,6 @@ I work on ontology and knowledge engineering across domains: conceptual models, 
 
 [:fontawesome-brands-linkedin: LinkedIn](https://w3id.org/pedropaulofb/linkedin){ .profile-link }
 
-[:material-email: Email](https://w3id.org/pedropaulofb/email){ .profile-link }
-
 [:fontawesome-brands-github: GitHub](https://w3id.org/pedropaulofb/github){ .profile-link }
 
 [:simple-googlescholar: Google Scholar](https://w3id.org/pedropaulofb/scholar){ .profile-link }
