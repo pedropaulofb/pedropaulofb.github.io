@@ -19,7 +19,7 @@ Short quotations, references, indexing, and citation are allowed with appropriat
 
 ## Machine-readable metadata
 
-Machine-readable metadata published by this site, including [`profile.jsonld`](profile.jsonld), may be reused for indexing, citation, academic and professional discovery, metadata aggregation, semantic interoperability use cases, and knowledge graph construction.
+Machine-readable metadata published by this site, including [`profile.jsonld`](profile.jsonld) and [`profile.ttl`](profile.ttl), may be reused for indexing, citation, academic and professional discovery, metadata aggregation, semantic interoperability use cases, and knowledge graph construction.
 
 Please attribute reused metadata to Pedro Paulo Favato Barcelos and link to: `https://pedropaulofb.github.io/`
 

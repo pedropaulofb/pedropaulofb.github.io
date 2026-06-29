@@ -20,4 +20,7 @@ Use LinkedIn or email for professional contact.
 - [Google Scholar](https://w3id.org/pedropaulofb/scholar) — publication record.
 - [ORCID](https://w3id.org/pedropaulofb/orcid) — persistent researcher identifier.
 
-Machine-readable profile: [`profile.jsonld`](profile.jsonld)
+## Machine-readable profiles
+
+- JSON-LD: [`profile.jsonld`](profile.jsonld)
+- RDF/Turtle: [`profile.ttl`](profile.ttl)

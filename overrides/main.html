@@ -40,6 +40,12 @@
   href="{{ 'profile.jsonld' | url }}"
   title="Machine-readable JSON-LD profile"
 />
+<link
+  rel="alternate"
+  type="text/turtle"
+  href="{{ 'profile.ttl' | url }}"
+  title="Machine-readable RDF/Turtle profile"
+/>
 
 {% if page and page.file and page.file.src_path == "index.md" %}
 <script type="application/ld+json">

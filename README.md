@@ -24,13 +24,18 @@ It is designed to be readable by both humans and machines. In addition to the vi
 
 ## Machine-readable metadata
 
-The site exposes a schema.org JSON-LD profile: <https://pedropaulofb.github.io/profile.jsonld>
+The site exposes two machine-readable profile serializations:
+
+- schema.org JSON-LD profile: <https://pedropaulofb.github.io/profile.jsonld>
+- RDF/Turtle profile: <https://pedropaulofb.github.io/profile.ttl>
 
 The main internal URI for the person entity is: <https://pedropaulofb.github.io/profile.jsonld#person>
 
 The profile metadata links to external identity and scholarly profile records, including ORCID, DBLP, Google Scholar, LinkedIn, GitHub, and w3id.org aliases.
 
-The homepage also includes a compact inline JSON-LD summary for the website and profile page, while [`profile.jsonld`](./docs/profile.jsonld) remains the canonical complete machine-readable profile.
+The homepage also includes a compact inline JSON-LD summary for the website and profile page. [`profile.jsonld`](./docs/profile.jsonld) remains the canonical complete machine-readable source, while [`profile.ttl`](./docs/profile.ttl) is generated from it as an RDF/Turtle serialization for Linked Data tooling.
+
+The generated Turtle file is checked in CI with [`scripts/generate_profile_ttl.py`](./scripts/generate_profile_ttl.py) to reduce drift between the two serializations.
 
 ## Crawler discovery
 
@@ -45,9 +50,11 @@ The crawler policy allows normal crawling and declares the sitemap location.
 
 - `docs/` — website source pages and static files served by MkDocs
 - `docs/profile.jsonld` — canonical machine-readable JSON-LD profile
+- `docs/profile.ttl` — generated RDF/Turtle profile derived from `docs/profile.jsonld`
 - `docs/robots.txt` — crawler policy
 - `docs/reuse.md` — reuse and attribution guidance
 - `overrides/main.html` — MkDocs Material template override for metadata links, page descriptions, and inline homepage JSON-LD
+- `scripts/generate_profile_ttl.py` — generator and CI check for the Turtle profile
 - `mkdocs.yml` — MkDocs configuration
 - `.github/workflows/` — GitHub Actions deployment workflow
 - `CITATION.cff` — citation metadata for the website and machine-readable profile metadata
