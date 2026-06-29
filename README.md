@@ -55,8 +55,10 @@ The crawler policy allows normal crawling and declares the sitemap location.
 - `docs/reuse.md` — reuse and attribution guidance
 - `overrides/main.html` — MkDocs Material template override for metadata links, page descriptions, and inline homepage JSON-LD
 - `scripts/generate_profile_ttl.py` — generator and CI check for the Turtle profile
+- `scripts/validate_site_references.py` — lightweight validation and reporting for site references, publication entries, and metadata consistency
 - `mkdocs.yml` — MkDocs configuration
-- `.github/workflows/` — GitHub Actions deployment workflow
+- `.github/workflows/` — GitHub Actions deployment and validation workflows
+- `.pre-commit-config.yaml` — optional local quality checks for Markdown, YAML, JSON, generated metadata, and site-maintenance validation
 - `CITATION.cff` — citation metadata for the website and machine-readable profile metadata
 - `LICENSE` — repository license
 
@@ -67,6 +69,62 @@ The Publications page lists selected publications and accepted papers most relev
 For broader and more frequently updated publication records, see the linked Google Scholar, ORCID, and DBLP profiles.
 
 This repository intentionally does not currently maintain local BibTeX or CSL-JSON publication files, to avoid duplicating and manually curating publication metadata already maintained in external scholarly profile systems.
+
+The current maintenance model is manual curation plus lightweight validation:
+
+- `docs/publications.md` remains the source of truth for selected publications.
+- External scholarly profiles and DOI/publisher/conference pages are authority checks, not generation sources.
+- `scripts/validate_site_references.py` checks repeated publication-entry structure, DOI-link format, duplicate headings, placeholders, status-sensitive links, and optional external HTTP status.
+- Local BibTeX, CSL-JSON, ORCID import, and YAML/JSON-backed generation are deferred unless the selected-publication page grows enough to justify duplicated structured data.
+
+## Site maintenance validation
+
+Run the local validation script before committing changes that affect pages, links, metadata, or publications:
+
+```bash
+python scripts/validate_site_references.py --repo-root .
+```
+
+To run external HTTP checks and write a Markdown report:
+
+```bash
+python scripts/validate_site_references.py --repo-root . --check-external --report site-maintenance-validation.md
+```
+
+The validation script reports:
+
+- missing required site files;
+- MkDocs navigation and social-link consistency;
+- profile JSON-LD and generated Turtle profile consistency;
+- exposure of JSON-LD and Turtle profile links from the MkDocs template;
+- internal-link target existence;
+- publication-entry structure and DOI/status-sensitive link checks;
+- an external URL inventory;
+- optional external HTTP status warnings.
+
+The GitHub Actions workflow `.github/workflows/validate-site-references.yml` runs the generated Turtle profile check and the site-maintenance validator on relevant pushes and pull requests, weekly, and by manual dispatch.
+
+## Local pre-commit checks
+
+Install pre-commit hooks with:
+
+```bash
+pre-commit install
+```
+
+Run all regular hooks manually with:
+
+```bash
+pre-commit run --all-files
+```
+
+Run the heavier MkDocs build hook manually with:
+
+```bash
+pre-commit run mkdocs-build-strict --hook-stage manual --all-files
+```
+
+The pre-commit configuration includes general repository quality hooks for whitespace, line endings, YAML/JSON/TOML syntax, merge-conflict markers, large files, private keys, Python syntax, and debug statements. It also includes local hooks for `profile.jsonld`, generated `profile.ttl`, and site-maintenance validation.
 
 ## Reuse and attribution
 

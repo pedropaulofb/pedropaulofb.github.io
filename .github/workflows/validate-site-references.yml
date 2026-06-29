@@ -1,0 +1,68 @@
+name: Validate site references
+
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - "overrides/**"
+      - "mkdocs.yml"
+      - "README.md"
+      - "CITATION.cff"
+      - "scripts/**"
+      - ".github/workflows/validate-site-references.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - "overrides/**"
+      - "mkdocs.yml"
+      - "README.md"
+      - "CITATION.cff"
+      - "scripts/**"
+      - ".github/workflows/validate-site-references.yml"
+  schedule:
+    - cron: "23 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate site maintenance
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check generated Turtle profile
+        run: python scripts/generate_profile_ttl.py --check
+
+      - name: Validate site references and publication maintenance
+        run: >
+          python scripts/validate_site_references.py
+          --repo-root .
+          --check-external
+          --report site-maintenance-validation.md
+
+      - name: Add report to job summary
+        if: always()
+        run: |
+          if [ -f site-maintenance-validation.md ]; then
+            cat site-maintenance-validation.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-maintenance-validation
+          path: site-maintenance-validation.md
+          if-no-files-found: ignore

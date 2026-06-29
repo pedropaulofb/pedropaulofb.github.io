@@ -1,0 +1,49 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: check-yaml
+        args: [--unsafe]
+      - id: check-json
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: check-added-large-files
+        args: [--maxkb=1024]
+      - id: detect-private-key
+      - id: check-ast
+      - id: debug-statements
+
+  - repo: local
+    hooks:
+      - id: validate-profile-jsonld
+        name: Validate profile JSON-LD syntax
+        entry: python -m json.tool docs/profile.jsonld
+        language: system
+        pass_filenames: false
+        files: ^docs/profile\.jsonld$
+
+      - id: generate-profile-ttl-check
+        name: Check generated Turtle profile
+        entry: python scripts/generate_profile_ttl.py --check
+        language: system
+        pass_filenames: false
+        files: ^(docs/profile\.jsonld|docs/profile\.ttl|scripts/generate_profile_ttl\.py)$
+
+      - id: validate-site-maintenance
+        name: Validate site metadata, links, and publications
+        entry: python scripts/validate_site_references.py --repo-root .
+        language: system
+        pass_filenames: false
+        files: ^(docs/|overrides/|mkdocs\.yml|README\.md|CITATION\.cff|scripts/)
+
+      - id: mkdocs-build-strict
+        name: Build MkDocs site strictly
+        entry: mkdocs build --strict
+        language: system
+        pass_filenames: false
+        stages: [manual]
